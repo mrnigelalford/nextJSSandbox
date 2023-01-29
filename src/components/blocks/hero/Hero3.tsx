@@ -20,7 +20,7 @@ const Hero3: FC = () => {
                   options={{
                     loop: true,
                     autoStart: true,
-                    strings: ['customer satisfaction', 'business needs', 'creative ideas']
+                    strings: ['good morning dadaay', 'good morning olivia', 'how did you sleep?', 'I love you', '']
                   }}
                 />
               </span>
