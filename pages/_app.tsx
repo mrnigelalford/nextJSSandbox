@@ -20,6 +20,7 @@ import 'plyr-react/plyr.css';
 import 'glightbox/dist/css/glightbox.css';
 // custom scrollcue css
 import 'plugins/scrollcue/scrollCue.css';
+import { GoogleAnalytics } from 'nextjs-google-analytics';
 
 function MyApp({ Component, pageProps }: AppProps) {
   const { pathname } = useRouter();
@@ -79,11 +80,12 @@ function MyApp({ Component, pageProps }: AppProps) {
       <Head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Sandbox - Modern & Multipurpose NextJS Template</title>
+        <title>Fulton Coffee Co.</title>
       </Head>
 
       <ThemeProvider>
         <div className="page-loader" />
+        <GoogleAnalytics trackPageViews gaMeasurementId={process.env.GA_MEASUERMENT_ID}/>
         <Component {...pageProps} />
       </ThemeProvider>
     </Fragment>

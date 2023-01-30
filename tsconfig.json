@@ -16,6 +16,6 @@
     "incremental": true,
     "baseUrl": "./src"
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "src/lib/headhesive.js", "pages/contact-3.tsx.ignore", "pages/checkout.tsx.ignore", "pages/cart.tsx.ignore", "pages/about-1.tsx.ignore", "pages/blog-3.tsx.ignore", "pages/blog-details-1.tsx.ignore", "pages/blog-details-3.tsx.ignore", "pages/career-1.tsx.ignore"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "src/lib/headhesive.js", "pages/contact-3.tsx.ignore", "pages/checkout.tsx.ignore", "pages/cart.tsx.ignore", "pages/about-1.tsx.ignore", "pages/blog-3.tsx.ignore", "pages/blog-details-1.tsx.ignore", "pages/blog-details-3.tsx.ignore", "pages/career-1.tsx.ignore", "pages/shop-2.tsx.ignore", "pages/projects-3.tsx.ignore"],
   "exclude": ["node_modules"]
 }
