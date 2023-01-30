@@ -1,5 +1,5 @@
 import { NextPage } from 'next';
-import { Fragment } from 'react';
+import { Fragment, useEffect } from 'react';
 // -------- custom component -------- //
 import { Hero12 } from 'components/blocks/hero';
 import { Facts8 } from 'components/blocks/facts';
@@ -12,8 +12,14 @@ import { Services16 } from 'components/blocks/services';
 import { Portfolio6 } from 'components/blocks/portfolio';
 import { Testimonial12 } from 'components/blocks/testimonial';
 import PageProgress from 'components/common/PageProgress';
+import { setCookie } from 'cookies-next';
 
 const Demo12: NextPage = () => {
+
+  useEffect(() => {
+    setCookie('landing-page', 'page3');
+  })
+
   return (
     <Fragment>
       <PageProgress />
