@@ -85,7 +85,7 @@ function MyApp({ Component, pageProps }: AppProps) {
 
       <ThemeProvider>
         <div className="page-loader" />
-        <GoogleAnalytics trackPageViews gaMeasurementId={process.env.GA_MEASUERMENT_ID}/>
+        <GoogleAnalytics trackPageViews/>
         <Component {...pageProps} />
       </ThemeProvider>
     </Fragment>
