@@ -17,6 +17,12 @@ const Demo9: NextPage = () => {
   useEffect(() => {
     setCookie('landing-page', 'page2');
   })
+
+  const pageData = {
+    heroTitle : 'Sandbox is effortless and powerful with',
+    typewriterOptions: ['quick brown fox', 'fast transactions', 'secure payments'],
+    subtitle: 'Achieve your saving goals. Have all your recurring and one time expenses and incomes in one place.'
+  }
   return (
     <Fragment>
       <PageProgress />
@@ -43,12 +49,12 @@ const Demo9: NextPage = () => {
       {/* ========== main content ========== */}
       <main className="content-wrapper">
         {/* ========== hero section ========== */}
-        <Hero9 />
+        <Hero9 heroTitle={pageData.heroTitle} typewriterOptions={pageData.typewriterOptions} subtitle={pageData.subtitle} />
 
         <section className="wrapper bg-light">
           <div className="container py-14 pt-md-17 pb-md-25">
             {/* ========== clients section ========== */}
-            <Clients3 />
+            {/* <Clients3 /> */}
 
             {/* ========== why choose section ========== */}
             <Services12 />
