@@ -1,13 +1,17 @@
 import { FC } from 'react';
 import Accordion from 'components/reuseable/accordion';
-// -------- data -------- //
-import { accordionList2 } from 'data/faq';
 
-// ============================================================
-type Faq2Props = { titleColor?: 'primary' | 'muted' };
-// ============================================================
+type Faq2Props = {
+  titleColor?: 'primary' | 'muted';
+  accordionList: {
+    no: string;
+    expand: boolean;
+    heading: string;
+    body: string;
+  }[]
+};
 
-const FAQ2: FC<Faq2Props> = ({ titleColor = 'primary' }) => {
+const FAQ2: FC<Faq2Props> = ({ titleColor = 'primary', accordionList }) => {
   return (
     <section className="wrapper bg-soft-primary">
       <div className="container py-14 py-md-16">
@@ -23,7 +27,7 @@ const FAQ2: FC<Faq2Props> = ({ titleColor = 'primary' }) => {
         <div className="row">
           <div className="col-lg-7 mx-auto">
             <div className="accordion-wrapper" id="accordion">
-              {accordionList2.map((item) => (
+              {accordionList.map((item) => (
                 <Accordion key={item.no} {...item} />
               ))}
             </div>

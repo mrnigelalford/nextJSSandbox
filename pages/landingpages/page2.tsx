@@ -19,6 +19,10 @@ import Rocket from 'icons/lineal/Rocket';
 import Shield from 'icons/lineal/Shield';
 import Savings from 'icons/lineal/Savings';
 
+// -------- data -------- //
+import { accordionList2 } from 'data/faq';
+
+
 const Demo9: NextPage = () => {
   useEffect(() => {
     setCookie('landing-page', 'page2');
@@ -80,7 +84,8 @@ const Demo9: NextPage = () => {
           features: ['20 Projects', '300K API Access', '500MB Storage', 'Weekly Reports', '7/24 Support'],
         }
       ]
-    }
+    },
+    // faqlist is being imported, see above
   }
   return (
     <Fragment>
@@ -134,7 +139,7 @@ const Demo9: NextPage = () => {
         </section>
 
         {/* ========== faq section ========== */}
-        <FAQ2 titleColor="muted" />
+        <FAQ2 titleColor="muted" accordionList={accordionList2}/>
       </main>
 
       {/* ========== footer section ========== */}

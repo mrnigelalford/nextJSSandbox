@@ -1,9 +1,9 @@
 import { NextRequest, NextResponse } from 'next/server';
 
 const pages = [
-  '/landingpages/page1',
-  '/landingpages/page2',
-  '/landingpages/page3',
+  // '/landingpages/page1',
+  '/landingpages/page2', // force everyone to landingpage 2 for now. update accordingly
+  // '/landingpages/page3',
   // ...
 ];
 
