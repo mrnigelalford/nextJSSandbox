@@ -13,15 +13,50 @@ import { Testimonial10 } from 'components/blocks/testimonial';
 import PageProgress from 'components/common/PageProgress';
 import { setCookie } from 'cookies-next';
 
+// -------- icons -------- //
+import Rocket from 'icons/lineal/Rocket';
+import Shield from 'icons/lineal/Shield';
+import Savings from 'icons/lineal/Savings';
+
 const Demo9: NextPage = () => {
   useEffect(() => {
     setCookie('landing-page', 'page2');
   })
 
   const pageData = {
-    heroTitle : 'Sandbox is effortless and powerful with',
+    heroTitle: 'Sandbox is effortless and powerful with',
     typewriterOptions: ['quick brown fox', 'fast transactions', 'secure payments'],
-    subtitle: 'Achieve your saving goals. Have all your recurring and one time expenses and incomes in one place.'
+    subtitle: 'Achieve your saving goals. Have all your recurring and one time expenses and incomes in one place.',
+    service: {
+      title: 'Why Choose Sandbox?',
+      subtitle: 'Here are a few reasons why our customers choose Sandbox.',
+      blocks: [
+        {
+          title: 'Easy Usage',
+          subtitle: 'Duis mollis commodo luctus cursus commodo tortor mauris.',
+          icon: (<Rocket className="icon-svg-md text-yellow me-4" />)
+        },
+        {
+          title: 'Fast Transactions',
+          subtitle: 'Duis mollis commodo luctus cursus commodo tortor mauris.',
+          icon: (<Savings className="icon-svg-md text-green me-4" />)
+        },
+        {
+          title: 'Secure Payments',
+          subtitle: 'Duis mollis commodo luctus cursus commodo tortor mauris.',
+          icon: (<Shield className="icon-svg-md text-red me-4" />)
+        },
+      ]
+    },
+    features: {
+      description: 'Etiam porta sem malesuada magna mollis euismod. Donec ullamcorper nulla non metus auctor fringilla. Morbi leorisus, porta ac consectetur ac, vestibulum at eros. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Nullam quis risus eget urna.',
+      list: [
+      'Nullam quis risus eget urna mollis ornare.',
+      'Donec id elit non mi porta gravida at eget.',
+      'Bruh Bruh Bruh'
+      ],
+      cta: 'Get Started'
+    }
   }
   return (
     <Fragment>
@@ -52,22 +87,22 @@ const Demo9: NextPage = () => {
         <Hero9 heroTitle={pageData.heroTitle} typewriterOptions={pageData.typewriterOptions} subtitle={pageData.subtitle} />
 
         <section className="wrapper bg-light">
-          <div className="container py-14 pt-md-17 pb-md-25">
+          <div className="container py-14 pt-md-17 pb-md-25" style={{ paddingBottom: 'revert !important'}}>
             {/* ========== clients section ========== */}
             {/* <Clients3 /> */}
 
             {/* ========== why choose section ========== */}
-            <Services12 />
+            <Services12 title={pageData.service.title} subtitle={pageData.service.subtitle} description={pageData.features.description} features={pageData.features.list} cta={pageData.features.cta} blocks={pageData.service.blocks} />
           </div>
         </section>
 
         {/* ========== testimonial section ========== */}
-        <Testimonial10 />
+        {/* <Testimonial10 /> */}
 
         <section className="wrapper bg-light">
           <div className="container py-14 py-md-17">
             {/* ========== how it works section ========== */}
-            <Process9 />
+            {/* <Process9 /> */}
 
             {/* ========== pricing section ========== */}
             <Pricing6 />
