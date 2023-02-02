@@ -12,6 +12,7 @@ import { Services12 } from 'components/blocks/services';
 import { Testimonial10 } from 'components/blocks/testimonial';
 import PageProgress from 'components/common/PageProgress';
 import { setCookie } from 'cookies-next';
+import NextLink from 'components/reuseable/links/NextLink';
 
 // -------- icons -------- //
 import Rocket from 'icons/lineal/Rocket';
@@ -51,11 +52,34 @@ const Demo9: NextPage = () => {
     features: {
       description: 'Etiam porta sem malesuada magna mollis euismod. Donec ullamcorper nulla non metus auctor fringilla. Morbi leorisus, porta ac consectetur ac, vestibulum at eros. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Nullam quis risus eget urna.',
       list: [
-      'Nullam quis risus eget urna mollis ornare.',
-      'Donec id elit non mi porta gravida at eget.',
-      'Bruh Bruh Bruh'
+        'Nullam quis risus eget urna mollis ornare.',
+        'Donec id elit non mi porta gravida at eget.',
+        'Bruh Bruh Bruh'
       ],
       cta: 'Get Started'
+    },
+    pricing: {
+      title: 'We offer great and premium prices.',
+      subtitle: (<p className="mb-5">
+        Enjoy a <NextLink title="free 30-day trial" href="#" className="hover" /> and experience the full service. No
+        credit card required!
+      </p>
+      ),
+      cta: (<NextLink href="#" title="See All Prices" className="btn btn-primary rounded mt-2" />),
+      pricingList: [
+        {
+          monthlyPrice: 19,
+          yearlyPrice: 199,
+          planName: 'Premium',
+          features: ['5 Projects', '100K API Access', '200MB Storage', 'Weekly Reports', '7/24 Support'],
+        },
+        {
+          monthlyPrice: 49,
+          yearlyPrice: 499,
+          planName: 'Corporate',
+          features: ['20 Projects', '300K API Access', '500MB Storage', 'Weekly Reports', '7/24 Support'],
+        }
+      ]
     }
   }
   return (
@@ -87,7 +111,7 @@ const Demo9: NextPage = () => {
         <Hero9 heroTitle={pageData.heroTitle} typewriterOptions={pageData.typewriterOptions} subtitle={pageData.subtitle} />
 
         <section className="wrapper bg-light">
-          <div className="container py-14 pt-md-17 pb-md-25" style={{ paddingBottom: 'revert !important'}}>
+          <div className="container py-14 pt-md-17 pb-md-25" style={{ paddingBottom: 'revert !important' }}>
             {/* ========== clients section ========== */}
             {/* <Clients3 /> */}
 
@@ -105,7 +129,7 @@ const Demo9: NextPage = () => {
             {/* <Process9 /> */}
 
             {/* ========== pricing section ========== */}
-            <Pricing6 />
+            <Pricing6 title={pageData.pricing.title} subtitle={pageData.pricing.subtitle} cta={pageData.pricing.cta} pricingList={pageData.pricing.pricingList} />
           </div>
         </section>
 

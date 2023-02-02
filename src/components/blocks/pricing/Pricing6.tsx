@@ -5,21 +5,28 @@ import { PricingCard1 } from 'components/reuseable/pricing-cards';
 // -------- data -------- //
 import { pricingList1 } from 'data/pricing';
 
-const Pricing6: FC = () => {
+interface PricingProps {
+  title: string;
+  subtitle: JSX.Element;
+  cta: JSX.Element;
+  pricingList: {
+    monthlyPrice: number;
+    yearlyPrice: number;
+    planName: string;
+    features: string[];
+  }[]
+}
+
+
+const Pricing6: FC<PricingProps> = (props) => {
   const [activeYearly, setActiveYearly] = useState(false);
 
   return (
     <div className="row gy-6 align-items-center">
       <div className="col-lg-4">
-        <h2 className="fs-15 text-uppercase text-muted mb-3">Our Pricing</h2>
-        <h3 className="display-4 mb-5">We offer great and premium prices.</h3>
-
-        <p className="mb-5">
-          Enjoy a <NextLink title="free 30-day trial" href="#" className="hover" /> and experience the full service. No
-          credit card required!
-        </p>
-
-        <NextLink href="#" title="See All Prices" className="btn btn-primary rounded mt-2" />
+        <h3 className="display-4 mb-5">{props.title}</h3>
+        {props.subtitle}
+        {props.cta}
       </div>
 
       <div className="col-lg-7 offset-lg-1 pricing-wrapper">
@@ -34,8 +41,9 @@ const Pricing6: FC = () => {
         </div>
 
         <div className="row gy-6 mt-5">
-          {pricingList1.map((item, i) => (
+          {props.pricingList.map((item, i) => (
             <div className={`col-md-6 ${i === 1 && 'popular'}`} key={i}>
+              {/* pass in click event to this component to handle pricing selection */}
               <PricingCard1 roundedButton bulletBg {...item} activeYearly={activeYearly} />
             </div>
           ))}

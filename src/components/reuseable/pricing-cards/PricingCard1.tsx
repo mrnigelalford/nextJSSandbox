@@ -45,6 +45,7 @@ const PricingCard1: FC<PricingCard1Props> = (props) => {
           href="#"
           title="Choose Plan"
           className={`btn btn-primary ${roundedButton ? 'rounded' : 'rounded-pill'}`}
+          onClick={() => {console.log('awesome!')}}
         />
       </div>
     </div>
