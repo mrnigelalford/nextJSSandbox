@@ -7,6 +7,7 @@ interface HeroProps {
  heroTitle: string;
  typewriterOptions: string[],
  subtitle: string;
+ cta: string;
 }
 
 const Hero9: FC<HeroProps> = (props) => {
@@ -35,11 +36,7 @@ const Hero9: FC<HeroProps> = (props) => {
 
             <div className="d-flex justify-content-center justify-content-lg-start">
               <span style={slideInDownAnimate('1200ms')}>
-                <NextLink title="Get Started" href="#" className="btn btn-lg btn-primary rounded me-2" />
-              </span>
-
-              <span style={slideInDownAnimate('1500ms')}>
-                <NextLink title="Free Trial" href="#" className="btn btn-lg btn-green rounded" />
+                <NextLink title={props.cta} href="#" className="btn btn-lg btn-primary rounded me-2" />
               </span>
             </div>
           </div>

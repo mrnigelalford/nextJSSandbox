@@ -21,6 +21,7 @@ import Savings from 'icons/lineal/Savings';
 
 // -------- data -------- //
 import { accordionList2 } from 'data/faq';
+import Megaphone from 'icons/lineal/Megaphone';
 
 
 const Demo9: NextPage = () => {
@@ -29,27 +30,27 @@ const Demo9: NextPage = () => {
   })
 
   const pageData = {
-    heroTitle: 'Sandbox is effortless and powerful with',
-    typewriterOptions: ['quick brown fox', 'fast transactions', 'secure payments'],
-    subtitle: 'Achieve your saving goals. Have all your recurring and one time expenses and incomes in one place.',
+    heroTitle: 'Your favorite marketing network.',
+    typewriterOptions: ['Local', 'Targeted Locations', 'Simple', 'Expanding reach'],
+    subtitle: 'Extend your audience reach. Connect with new and existing customers through targeted Indoor Advertising Solutions.',
     service: {
-      title: 'Why Choose Sandbox?',
-      subtitle: 'Here are a few reasons why our customers choose Sandbox.',
+      title: 'Why Choose Adwatt?',
+      subtitle: 'Here are a few reasons why our customers choose Adwatt.',
       blocks: [
         {
           title: 'Easy Usage',
-          subtitle: 'Duis mollis commodo luctus cursus commodo tortor mauris.',
+          subtitle: 'Simple online management portal and APIs.',
           icon: (<Rocket className="icon-svg-md text-yellow me-4" />)
         },
         {
-          title: 'Fast Transactions',
-          subtitle: 'Duis mollis commodo luctus cursus commodo tortor mauris.',
-          icon: (<Savings className="icon-svg-md text-green me-4" />)
+          title: 'Local networks',
+          subtitle: 'Reach your audience with increased impressions',
+          icon: (<Megaphone className="icon-svg-md text-green me-4" />)
         },
         {
           title: 'Secure Payments',
-          subtitle: 'Duis mollis commodo luctus cursus commodo tortor mauris.',
-          icon: (<Shield className="icon-svg-md text-red me-4" />)
+          subtitle: 'flexible single or recurring ad subscription rates available',
+          icon: (<Savings className="icon-svg-md text-red me-4" />)
         },
       ]
     },
@@ -94,26 +95,25 @@ const Demo9: NextPage = () => {
       {/* ========== header ========== */}
       <header className="wrapper bg-soft-primary">
         <Navbar
-          info
           navOtherClass="navbar-other ms-lg-4"
           navClassName="navbar navbar-expand-lg classic transparent navbar-light"
-          button={
-            <a
-              href="#"
-              data-bs-toggle="modal"
-              data-bs-target="#modal-signin"
-              className="btn btn-sm btn-primary rounded-pill"
-            >
-              Sign In
-            </a>
-          }
+          // button={
+          //   <a
+          //     href="#"
+          //     data-bs-toggle="modal"
+          //     data-bs-target="#modal-signin"
+          //     className="btn btn-sm btn-primary rounded-pill"
+          //   >
+          //     Sign In
+          //   </a>
+          // }
         />
       </header>
 
       {/* ========== main content ========== */}
       <main className="content-wrapper">
         {/* ========== hero section ========== */}
-        <Hero9 heroTitle={pageData.heroTitle} typewriterOptions={pageData.typewriterOptions} subtitle={pageData.subtitle} />
+        <Hero9 heroTitle={pageData.heroTitle} typewriterOptions={pageData.typewriterOptions} subtitle={pageData.subtitle} cta={'Go now!'} />
 
         <section className="wrapper bg-light">
           <div className="container py-14 pt-md-17 pb-md-25" style={{ paddingBottom: 'revert !important' }}>

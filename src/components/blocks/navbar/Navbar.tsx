@@ -64,8 +64,8 @@ const Navbar: FC<NavbarProps> = (props) => {
   // all main header contents
   const headerContent = (
     <Fragment>
-      <div className="navbar-brand w-100">
-        <NextLink href="/" title={<img alt="logo" src={`/img/${logo}.png`} srcSet={`/img/${logo}@2x.png 2x`} />} />
+      <div className="navbar-brand w-100" >
+        <NextLink href="/" title={<img alt="logo" src={`/img/${logo}.png`} srcSet={`/img/${logo}@2x.png 2x`} style={{width: '15em'}}/>} />
       </div>
 
       <div id="offcanvas-nav" data-bs-scroll="true" className="navbar-collapse offcanvas offcanvas-nav offcanvas-start">
@@ -75,7 +75,7 @@ const Navbar: FC<NavbarProps> = (props) => {
         </div>
 
         <div className="offcanvas-body ms-lg-auto d-flex flex-column h-100">
-          <ul className="navbar-nav">
+          <ul style={{ display: 'none' }} className="navbar-nav">
             {/* ===================== demos nav item ===================== */}
             <li className="nav-item dropdown dropdown-mega">
               <DropdownToggleLink title="Demos" className="nav-link dropdown-toggle" />
@@ -210,7 +210,7 @@ const Navbar: FC<NavbarProps> = (props) => {
           </ul>
 
           {/* ============= show contact info in the small device sidebar ============= */}
-          <div className="offcanvas-footer d-lg-none">
+          <div style={{ display: 'none' }} className="offcanvas-footer d-lg-none">
             <div>
               <NextLink title="info@email.com" className="link-inverse" href="mailto:first.last@email.com" />
               <br />
@@ -279,34 +279,37 @@ const Navbar: FC<NavbarProps> = (props) => {
 
   return (
     <Fragment>
-      {stickyBox && <div style={{ paddingTop: sticky ? navbarRef.current?.clientHeight : 0 }} />}
+      <div style={{paddingTop: '1.5em'}}>
+        {stickyBox && <div style={{ paddingTop: sticky ? navbarRef.current?.clientHeight : 0 }} />}
 
-      <nav ref={navbarRef} className={sticky ? fixedClassName : navClassName}>
-        {fancy ? (
-          <div className="container">
-            <div className="navbar-collapse-wrapper bg-white d-flex flex-row flex-nowrap w-100 justify-content-between align-items-center">
-              {headerContent}
+        <nav ref={navbarRef} className={sticky ? fixedClassName : navClassName}>
+          {fancy ? (
+            <div className="container">
+              <div className="navbar-collapse-wrapper bg-white d-flex flex-row flex-nowrap w-100 justify-content-between align-items-center">
+                {headerContent}
+              </div>
             </div>
-          </div>
-        ) : (
-          <div className="container flex-lg-row flex-nowrap align-items-center">{headerContent}</div>
-        )}
-      </nav>
+          ) : (
+            <div className="container flex-lg-row flex-nowrap align-items-center">{headerContent}</div>
+          )}
+        </nav>
 
-      {/* ============= signin modal ============= */}
-      <Signin />
+        {/* ============= signin modal ============= */}
+        <Signin />
 
-      {/* ============= signup modal ============= */}
-      <Signup />
+        {/* ============= signup modal ============= */}
+        <Signup />
 
-      {/* ============= info sidebar ============= */}
-      {info && <Info />}
+        {/* ============= info sidebar ============= */}
+        {info && <Info />}
 
-      {/* ============= show search box ============= */}
-      {search && <Search />}
+        {/* ============= show search box ============= */}
+        {search && <Search />}
 
-      {/* ============= cart sidebar ============= */}
-      {cart && <MiniCart />}
+        {/* ============= cart sidebar ============= */}
+        {cart && <MiniCart />}
+
+      </div>
     </Fragment>
   );
 };
