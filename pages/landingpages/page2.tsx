@@ -55,19 +55,20 @@ const Demo9: NextPage = () => {
       ]
     },
     features: {
-      description: 'Etiam porta sem malesuada magna mollis euismod. Donec ullamcorper nulla non metus auctor fringilla. Morbi leorisus, porta ac consectetur ac, vestibulum at eros. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Nullam quis risus eget urna.',
+      listTitle: 'Add a new ad source',
+      description: <p>Our indoor billboard platform offers effortless accessibility to a massive audience. Our cutting-edge technology and strategically placed billboards increase visibility and impact for your company or brand. 
+        <br />Quickly create and distribute engaging content without the hassle of traditional advertising methods.</p>,
       list: [
-        'Nullam quis risus eget urna mollis ornare.',
-        'Donec id elit non mi porta gravida at eget.',
-        'Bruh Bruh Bruh'
+        'Increased impressions per session',
+        'Online management portal, flexible ad updates',
+        'Data and analytics reporting'
       ],
       cta: 'Get Started'
     },
     pricing: {
-      title: 'We offer great and premium prices.',
+      title: 'Flexible pricing options to fit your budget',
       subtitle: (<p className="mb-5">
-        Enjoy a <NextLink title="free 30-day trial" href="#" className="hover" /> and experience the full service. No
-        credit card required!
+        Run ads as short or as long as you want. Flexible time slots and pricing options to fit your needs.
       </p>
       ),
       cta: (<NextLink href="#" title="See All Prices" className="btn btn-primary rounded mt-2" />),
@@ -87,6 +88,7 @@ const Demo9: NextPage = () => {
       ]
     },
     // faqlist is being imported, see above
+    // <NextLink title="free 30-day trial" href="#" className="hover" />
   }
   return (
     <Fragment>
@@ -113,7 +115,7 @@ const Demo9: NextPage = () => {
       {/* ========== main content ========== */}
       <main className="content-wrapper">
         {/* ========== hero section ========== */}
-        <Hero9 heroTitle={pageData.heroTitle} typewriterOptions={pageData.typewriterOptions} subtitle={pageData.subtitle} cta={'Go now!'} />
+        <Hero9 heroTitle={pageData.heroTitle} typewriterOptions={pageData.typewriterOptions} subtitle={pageData.subtitle} cta={'Get Started'} />
 
         <section className="wrapper bg-light">
           <div className="container py-14 pt-md-17 pb-md-25" style={{ paddingBottom: 'revert !important' }}>
@@ -121,7 +123,15 @@ const Demo9: NextPage = () => {
             {/* <Clients3 /> */}
 
             {/* ========== why choose section ========== */}
-            <Services12 title={pageData.service.title} subtitle={pageData.service.subtitle} description={pageData.features.description} features={pageData.features.list} cta={pageData.features.cta} blocks={pageData.service.blocks} />
+            <Services12
+              title={pageData.service.title}
+              subtitle={pageData.service.subtitle}
+              description={pageData.features.description}
+              features={pageData.features.list}
+              cta={pageData.features.cta}
+              blocks={pageData.service.blocks}
+              listTitle={pageData.features.listTitle}
+              descriptionTwo={pageData.features.descriptionTwo} />
           </div>
         </section>
 

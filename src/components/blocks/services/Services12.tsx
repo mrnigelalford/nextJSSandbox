@@ -5,9 +5,10 @@ import NextLink from 'components/reuseable/links/NextLink';
 interface ServicesProps {
   title: string;
   subtitle: string;
-  description: string;
+  description: JSX.Element;
   features: string[],
   cta: string;
+  listTitle: string;
   blocks: {
     title: string;
     subtitle: string;
@@ -102,19 +103,19 @@ const Services12: FC<ServicesProps> = (props) => {
               </div>
             </div>
 
-            <List title="This the lyft driver" color="yellow" description={props.description} features={props.features} cta={props.cta} />
+            <List title={props.listTitle} color="yellow" description={props.description} features={props.features} cta={props.cta}/>
           </div>
       </div>
     </Fragment>
   );
 };
 
-type ListProps = { color: 'red' | 'yellow' | 'green'; title: string; description: string; features: string[], cta: string; };
-const List = ({ color, title, description, features, cta }: ListProps) => {
+type ListProps = { color: 'red' | 'yellow' | 'green'; title: string; description: JSX.Element; features: string[], cta: string;};
+const List = ({ color, title, description, features, cta, }: ListProps) => {
   return (
     <div className="col-lg-6">
       <h2 className="mb-3">{title}</h2>
-      <p> {description} </p>
+      {description}
 
       <ul className={`icon-list bullet-bg bullet-soft-${color}`}>
         {features?.map((feature, i) => (
