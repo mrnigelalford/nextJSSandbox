@@ -11,12 +11,23 @@ const COOKIE_NAME = 'landing-page'
 
 export function middleware(request: NextRequest) {
   
-  if (request.nextUrl.pathname === '/') {
+  if (request.nextUrl.pathname === '/businness-owner') {
     let cookie = request.cookies.get(COOKIE_NAME);
     const _page = pages[Math.floor(Math.random() * pages.length)];
 
     if(!cookie) {
-      return NextResponse.rewrite(new URL(_page as string, request.url))
+      return NextResponse.rewrite(new URL('/landingpages/page1'  as string, request.url))
+    }
+
+    return NextResponse.rewrite(new URL(`/landingpages/${cookie}` as string, request.url))
+  }
+  
+  if (request.nextUrl.pathname === '/advertiser') {
+    let cookie = request.cookies.get(COOKIE_NAME);
+    const _page = pages[Math.floor(Math.random() * pages.length)];
+
+    if(!cookie) {
+      return NextResponse.rewrite(new URL('/landingpages/page2'  as string, request.url))
     }
 
     return NextResponse.rewrite(new URL(`/landingpages/${cookie}` as string, request.url))

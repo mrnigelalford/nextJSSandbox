@@ -30,7 +30,7 @@ const Demo5: NextPage = () => {
           button={
             <div className="d-flex align-items-center gap-3">
               <a className="nav-link" data-bs-toggle="modal" data-bs-target="#modal-signin">
-                Sign In
+                Welcome Business!
               </a>
               <button className="btn btn-sm btn-primary rounded" data-bs-toggle="modal" data-bs-target="#modal-signup">
                 Sign Up

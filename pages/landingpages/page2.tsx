@@ -29,10 +29,14 @@ const Demo9: NextPage = () => {
     setCookie('landing-page', 'page2');
   })
 
+  // self-serve programmatic advertising platform used by exceptional digital marketers like you
+
+  // cta send user to form
+
   const pageData = {
     heroTitle: 'Your favorite marketing network.',
     typewriterOptions: ['Local', 'Targeted Locations', 'Simple', 'Expanding reach'],
-    subtitle: 'Extend your audience reach. Connect with new and existing customers through targeted Indoor Advertising Solutions.',
+    subtitle: 'Extend your audience reach. Connect with new and existing customers through targeted Indoor Advertising.',
     service: {
       title: 'Why Choose Adwatt?',
       subtitle: 'Here are a few reasons why our customers choose Adwatt.',
@@ -74,7 +78,7 @@ const Demo9: NextPage = () => {
       cta: (<NextLink href="#" title="See All Prices" className="btn btn-primary rounded mt-2" />),
       pricingList: [
         {
-          monthlyPrice: 19,
+          monthlyPrice: 9,
           yearlyPrice: 199,
           planName: 'Premium',
           features: ['5 Projects', '100K API Access', '200MB Storage', 'Weekly Reports', '7/24 Support'],

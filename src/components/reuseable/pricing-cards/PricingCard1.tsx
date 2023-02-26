@@ -24,7 +24,7 @@ const PricingCard1: FC<PricingCard1Props> = (props) => {
     <div className="pricing card shadow-lg">
       <div className="card-body pb-12">
         <div className="prices text-dark">
-          <Price duration="mo" value={monthlyPrice} classes={monthClasses} />
+          <Price duration="cpm" value={monthlyPrice} classes={monthClasses} />
           <Price duration="yr" value={yearlyPrice} classes={yearClasses} />
         </div>
 
