@@ -1,6 +1,8 @@
 import { FC, Fragment } from 'react';
 // -------- custom component -------- //
 import NextLink from 'components/reuseable/links/NextLink';
+import SimpleImageSlider from 'react-simple-image-slider';
+import { serviceImages } from 'data/adwatt';
 
 interface ServicesProps {
   title: string;
@@ -14,23 +16,7 @@ interface ServicesProps {
     subtitle: string;
     icon: JSX.Element
   }[]
-}
-
-const images =
-  {
-    large: {
-      src: '/img/photos/sa13.jpg',
-      srcSet: '/img/photos/sa13@2x.jpg 2x'
-    },
-    landscape: {
-      src: '/img/photos/sa14.jpg',
-      srcSet: '/img/photos/sa14@2x.jpg 2x'
-    },
-    portrait: {
-      src: '/img/photos/sa15.jpg',
-      srcSet: '/img/photos/sa15@2x.jpg 2x'
-    }
-  };
+}; 
 
 const Services12: FC<ServicesProps> = (props) => {
   return (
@@ -77,28 +63,8 @@ const Services12: FC<ServicesProps> = (props) => {
           <div className="row gx-lg-8 gx-xl-12 gy-10 align-items-center">
             <div className="col-lg-6">
               <div className="row gx-md-5 gy-5 align-items-center">
-                <div className="col-6">
-                  <img
-                    alt=""
-                    src={images.large.src}
-                    srcSet={images.large.src}
-                    className="img-fluid rounded shadow-lg d-flex ms-auto"
-                  />
-                </div>
-
-                <div className="col-6">
-                  <img
-                    alt=""
-                    src={images.landscape.src}
-                    srcSet={images.landscape.srcSet}
-                    className="img-fluid rounded shadow-lg mb-5"
-                  />
-                  <img
-                    alt=""
-                    src={images.portrait.src}
-                    srcSet={images.portrait.srcSet}
-                    className="img-fluid rounded shadow-lg d-flex col-10"
-                  />
+                <div className="col-12">
+                  <SimpleImageSlider images={serviceImages} slideDuration={3} autoPlay showBullets showNavs={false} width={500} height={300} />
                 </div>
               </div>
             </div>
@@ -125,7 +91,7 @@ const List = ({ color, title, description, features, cta, }: ListProps) => {
         ))}
       </ul>
 
-      <NextLink title={cta} href="#" className={`btn btn-${color} mt-2`} />
+      <NextLink title={cta} href="/contact" className={`btn btn-${color} mt-2`} />
     </div>
   );
 };

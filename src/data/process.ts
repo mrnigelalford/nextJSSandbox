@@ -11,6 +11,8 @@ import DeliveryBox from 'icons/solid-mono/DeliveryBox';
 import PieChartTwo from 'icons/lineal/PieChartTwo';
 import SmartphoneTwo from 'icons/lineal/SmartphoneTwo';
 import CloudComputing from 'icons/lineal/CloudComputing';
+import Megaphone from 'icons/lineal/Megaphone';
+import Check from 'icons/lineal/Check';
 
 // used in the process-1, process-7, process-14 block
 export const processList1 = [
@@ -104,20 +106,20 @@ export const processList5 = [
   {
     Icon: Shield,
     color: 'red',
-    title: '1. Secured Transactions',
-    subtitle: 'Etiam porta malesuada magna mollis euismod sem.'
+    title: 'Easy Usage',
+    subtitle: 'Simple online management portal and APIs.'
   },
   {
-    Icon: Savings,
+    Icon: Megaphone,
     color: 'green',
-    title: '2. Budget Planning',
+    title: 'Local networks',
     subtitle: 'Etiam porta malesuada magna mollis euismod sem.'
   },
   {
-    Icon: Loading,
+    Icon: Check,
     color: 'yellow',
-    title: '3. Up to Date',
-    subtitle: 'Etiam porta malesuada magna mollis euismod sem.'
+    title: 'Multi format support',
+    subtitle: 'Supports Most Video And Graphic Formats'
   }
 ];
 

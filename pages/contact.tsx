@@ -3,7 +3,7 @@ import { Fragment } from 'react';
 // -------- custom component -------- //
 import { Navbar } from 'components/blocks/navbar';
 import { Footer8 } from 'components/blocks/footer';
-import { Contact2 } from 'components/blocks/contact';
+import { Contact1, Contact10, Contact2, Contact3, Contact4, Contact5, Contact6 } from 'components/blocks/contact';
 import PageProgress from 'components/common/PageProgress';
 import ContactForm from 'components/common/ContactForm';
 import NextLink from 'components/reuseable/links/NextLink';
@@ -16,18 +16,15 @@ const ContactThree: NextPage = () => {
       {/* ========== header section ========== */}
       <header className="wrapper bg-soft-primary">
         <Navbar
-          language
-          stickyBox={false}
-          logoAlt="logo-light"
-          navClassName="navbar navbar-expand-lg center-nav transparent position-absolute navbar-dark"
-          button={<NextLink title="Contact" href="#" className="btn btn-sm btn-primary rounded-pill" />}
+          logoAlt="logo-dark"
+          navClassName="navbar navbar-expand-lg classic transparent navbar-light"
         />
       </header>
 
       <main className="content-wrapper">
         {/* ========== page title section ========== */}
         <section className="wrapper bg-dark text-white">
-          <div className="container pt-18 pt-md-20 pb-21 pb-md-21 text-center">
+          <div className="container pt-18 pt-md-4 pb-4 pb-md-21 text-center">
             <div className="row">
               <div className="col-sm-10 col-md-8 col-lg-6 col-xl-6 col-xxl-5 mx-auto">
                 <h1 className="display-1 text-white mb-3">Get in Touch</h1>
@@ -43,7 +40,7 @@ const ContactThree: NextPage = () => {
           <div className="container pb-14 pb-md-160">
             {/* ========== newsletter section ========== */}
             <div className="row">
-              <div className="col mt-n19 mb-16">
+              <div className="col mt-n19">
                 <div className="card shadow-lg">
                   <Contact2 />
                 </div>
@@ -55,11 +52,11 @@ const ContactThree: NextPage = () => {
                 <div className="row gy-10 gx-lg-8 gx-xl-12">
                   {/* ========== contact form section ========== */}
                   <div className="col-lg-8">
-                    <ContactForm />
+                <div style={{height: '40em'}} dangerouslySetInnerHTML={{ __html: `<iframe data-w-type="embedded" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://0jk78.mjt.lu/wgt/0jk78/mh4/form?c=30252e49" height="600em" width="100%"></iframe>` }}></div>
                   </div>
 
                   {/* ========== contact info section ========== */}
-                  <div className="col-lg-4">
+                  <div style={{display: 'none'}} className="col-lg-4">
                     <div className="d-flex flex-row">
                       <div>
                         <div className="icon text-primary fs-28 me-4 mt-n1">
@@ -115,7 +112,7 @@ const ContactThree: NextPage = () => {
         </div>
 
         {/* ========== map section ========== */}
-        <section className="wrapper bg-light">
+        {/* <section className="wrapper bg-light">
           <div className="map">
             <iframe
               width="100%"
@@ -125,7 +122,7 @@ const ContactThree: NextPage = () => {
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d25387.23478654725!2d-122.06115399490332!3d37.309248660190086!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fb4571bd377ab%3A0x394d3fe1a3e178b4!2sCupertino%2C%20CA%2C%20USA!5e0!3m2!1sen!2str!4v1645437305701!5m2!1sen!2str"
             />
           </div>
-        </section>
+        </section> */}
       </main>
 
       {/* ========== footer section ========== */}

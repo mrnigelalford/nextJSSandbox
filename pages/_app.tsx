@@ -21,6 +21,7 @@ import 'glightbox/dist/css/glightbox.css';
 // custom scrollcue css
 import 'plugins/scrollcue/scrollCue.css';
 import { GoogleAnalytics } from 'nextjs-google-analytics';
+import { siteTitle } from 'data/adwatt';
 
 function MyApp({ Component, pageProps }: AppProps) {
   const { pathname } = useRouter();
@@ -80,7 +81,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       <Head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Fulton Coffee Co.</title>
+        <title>{siteTitle}</title>
       </Head>
 
       <ThemeProvider>

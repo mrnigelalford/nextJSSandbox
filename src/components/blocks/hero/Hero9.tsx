@@ -36,7 +36,7 @@ const Hero9: FC<HeroProps> = (props) => {
 
             <div className="d-flex justify-content-center justify-content-lg-start">
               <span style={slideInDownAnimate('1200ms')}>
-                <NextLink title={props.cta} href="#" className="btn btn-lg btn-primary rounded me-2" />
+                <NextLink title={props.cta} href="/contact" className="btn btn-lg btn-primary rounded me-2" />
               </span>
             </div>
           </div>
@@ -47,58 +47,27 @@ const Hero9: FC<HeroProps> = (props) => {
                 <div className="ms-auto mt-auto" style={zoomInAnimate('300ms')}>
                   <img
                     className="img-fluid rounded shadow-lg"
-                    src="/img/photos/sa20.jpg"
-                    srcSet="/img/photos/sa20@2x.jpg 2x"
-                    alt="demo"
-                  />
-                </div>
-
-                <div className="ms-auto mt-5 mb-10" style={zoomInAnimate('600ms')}>
-                  <img
-                    className="img-fluid rounded shadow-lg"
-                    src="/img/photos/sa18.jpg"
-                    srcSet="/img/photos/sa18@2x.jpg 2x"
+                    src="/img/locationExamples/gymLobby.png"
                     alt="demo"
                   />
                 </div>
               </div>
 
-              <div className="col-4 col-lg-5" style={zoomInAnimate('0ms')}>
-                <div>
+              <div className="col-4 col-lg-4" style={zoomInAnimate('0ms')}>
                   <img
                     className="w-100 img-fluid rounded shadow-lg"
-                    src="/img/photos/sa16.jpg"
-                    srcSet="/img/photos/sa16@2x.jpg 2x"
+                    src="/img/locationExamples/coffeeShop.png"
                     alt="demo"
                   />
-                </div>
               </div>
 
-              <div className="col-3 d-flex flex-column">
-                <div className="mt-auto" style={zoomInAnimate('300ms')}>
+              <div className="col-4 col-lg-4">
+                <div className="ms-auto mt-auto" style={zoomInAnimate('300ms')}>
                   <img
-                    alt="demo"
-                    src="/img/photos/sa21.jpg"
-                    srcSet="/img/photos/sa21@2x.jpg 2x"
                     className="img-fluid rounded shadow-lg"
-                  />
-                </div>
-
-                <div className="mt-5" style={zoomInAnimate('600ms')}>
-                  <img
+                    src="/img/locationExamples/barbershop.png"
                     alt="demo"
-                    src="/img/photos/sa19.jpg"
-                    srcSet="/img/photos/sa19@2x.jpg 2x"
-                    className="img-fluid rounded shadow-lg"
-                  />
-                </div>
-
-                <div className="mt-5 mb-10" style={zoomInAnimate('900ms')}>
-                  <img
-                    alt="demo"
-                    src="/img/photos/sa17.jpg"
-                    srcSet="/img/photos/sa17@2x.jpg 2x"
-                    className="img-fluid rounded shadow-lg"
+                    style={{marginTop: '55%'}}
                   />
                 </div>
               </div>

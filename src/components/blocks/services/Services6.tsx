@@ -11,6 +11,7 @@ type Services6Props = {
   bulletColor?: string;
   rowClassNames?: string;
   colTwoClassNames?: string;
+  serviceList?: string[];
 };
 // ============================================================
 

@@ -176,8 +176,8 @@ export const serviceList4 = [
 
 // used in the services-6 block
 export const serviceList5 = [
-  ['Aenean quam ornare curabitur blandit consectetur.', 'Nullam quis risus eget urna mollis ornare aenean leo.'],
-  ['Etiam porta euismod malesuada mollis nisl ornare.', 'Vivamus sagittis lacus augue rutrum maecenas odio.']
+  ['Increased impressions per session.', 'Online management portal, flexible ad updates.'],
+  ['Data and analytics reporting.']
 ];
 
 // used in the services-7 block

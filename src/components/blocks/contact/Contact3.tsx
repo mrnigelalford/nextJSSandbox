@@ -14,8 +14,7 @@ const Contact3: FC = () => {
       <div className="col-lg-5">
         <h2 className="display-4 mb-3">Let’s Talk</h2>
         <p className="lead fs-lg">
-          Lets make something great together. We are <span className="underline">trusted by</span> over 5000+ clients.
-          Join them by using our services and grow your business.
+          Work with adwatt to grow your ad reach today!.
         </p>
 
         <p>

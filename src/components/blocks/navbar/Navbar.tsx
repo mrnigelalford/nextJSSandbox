@@ -267,7 +267,7 @@ const Navbar: FC<NavbarProps> = (props) => {
           {social && <Social />}
 
           {/* ============= humburger button for small device ============= */}
-          <li className="nav-item d-lg-none">
+          <li style={{display: 'none'}}className="nav-item d-lg-none">
             <button data-bs-toggle="offcanvas" data-bs-target="#offcanvas-nav" className="hamburger offcanvas-nav-btn">
               <span />
             </button>

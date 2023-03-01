@@ -22,6 +22,7 @@ import Savings from 'icons/lineal/Savings';
 // -------- data -------- //
 import { accordionList2 } from 'data/faq';
 import Megaphone from 'icons/lineal/Megaphone';
+import pageData from 'data/adwatt';
 
 
 const Demo9: NextPage = () => {
@@ -33,67 +34,6 @@ const Demo9: NextPage = () => {
 
   // cta send user to form
 
-  const pageData = {
-    heroTitle: 'Your favorite marketing network.',
-    typewriterOptions: ['Local', 'Targeted Locations', 'Simple', 'Expanding reach'],
-    subtitle: 'Extend your audience reach. Connect with new and existing customers through targeted Indoor Advertising.',
-    service: {
-      title: 'Why Choose Adwatt?',
-      subtitle: 'Here are a few reasons why our customers choose Adwatt.',
-      blocks: [
-        {
-          title: 'Easy Usage',
-          subtitle: 'Simple online management portal and APIs.',
-          icon: (<Rocket className="icon-svg-md text-yellow me-4" />)
-        },
-        {
-          title: 'Local networks',
-          subtitle: 'Reach your audience with increased impressions',
-          icon: (<Megaphone className="icon-svg-md text-green me-4" />)
-        },
-        {
-          title: 'Secure Payments',
-          subtitle: 'flexible single or recurring ad subscription rates available',
-          icon: (<Savings className="icon-svg-md text-red me-4" />)
-        },
-      ]
-    },
-    features: {
-      listTitle: 'Add a new ad source',
-      description: <p>Our indoor billboard platform offers effortless accessibility to a massive audience. Our cutting-edge technology and strategically placed billboards increase visibility and impact for your company or brand. 
-        <br />Quickly create and distribute engaging content without the hassle of traditional advertising methods.</p>,
-      list: [
-        'Increased impressions per session',
-        'Online management portal, flexible ad updates',
-        'Data and analytics reporting'
-      ],
-      cta: 'Get Started'
-    },
-    pricing: {
-      title: 'Flexible pricing options to fit your budget',
-      subtitle: (<p className="mb-5">
-        Run ads as short or as long as you want. Flexible time slots and pricing options to fit your needs.
-      </p>
-      ),
-      cta: (<NextLink href="#" title="See All Prices" className="btn btn-primary rounded mt-2" />),
-      pricingList: [
-        {
-          monthlyPrice: 9,
-          yearlyPrice: 199,
-          planName: 'Premium',
-          features: ['5 Projects', '100K API Access', '200MB Storage', 'Weekly Reports', '7/24 Support'],
-        },
-        {
-          monthlyPrice: 49,
-          yearlyPrice: 499,
-          planName: 'Corporate',
-          features: ['20 Projects', '300K API Access', '500MB Storage', 'Weekly Reports', '7/24 Support'],
-        }
-      ]
-    },
-    // faqlist is being imported, see above
-    // <NextLink title="free 30-day trial" href="#" className="hover" />
-  }
   return (
     <Fragment>
       <PageProgress />
@@ -103,16 +43,16 @@ const Demo9: NextPage = () => {
         <Navbar
           navOtherClass="navbar-other ms-lg-4"
           navClassName="navbar navbar-expand-lg classic transparent navbar-light"
-          // button={
-          //   <a
-          //     href="#"
-          //     data-bs-toggle="modal"
-          //     data-bs-target="#modal-signin"
-          //     className="btn btn-sm btn-primary rounded-pill"
-          //   >
-          //     Sign In
-          //   </a>
-          // }
+        // button={
+        //   <a
+        //     href="#"
+        //     data-bs-toggle="modal"
+        //     data-bs-target="#modal-signin"
+        //     className="btn btn-sm btn-primary rounded-pill"
+        //   >
+        //     Sign In
+        //   </a>
+        // }
         />
       </header>
 
@@ -134,15 +74,14 @@ const Demo9: NextPage = () => {
               features={pageData.features.list}
               cta={pageData.features.cta}
               blocks={pageData.service.blocks}
-              listTitle={pageData.features.listTitle}
-              descriptionTwo={pageData.features.descriptionTwo} />
+              listTitle={pageData.features.listTitle}/>
           </div>
         </section>
 
         {/* ========== testimonial section ========== */}
         {/* <Testimonial10 /> */}
 
-        <section className="wrapper bg-light">
+        <section style={{ display: 'none' }} className="wrapper bg-light">
           <div className="container py-14 py-md-17">
             {/* ========== how it works section ========== */}
             {/* <Process9 /> */}
@@ -153,7 +92,9 @@ const Demo9: NextPage = () => {
         </section>
 
         {/* ========== faq section ========== */}
-        <FAQ2 titleColor="muted" accordionList={accordionList2}/>
+        <section style={{display: 'none'}}>
+          <FAQ2 titleColor="muted" accordionList={accordionList2} />
+        </section>
       </main>
 
       {/* ========== footer section ========== */}
