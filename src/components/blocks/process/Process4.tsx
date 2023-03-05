@@ -29,7 +29,7 @@ const Process4: FC = () => {
           <div className="col-lg-9 mx-auto">
             <h2 className="fs-15 text-uppercase text-muted mb-3">Our Process</h2>
             <h3 className="display-4 mb-0 text-center px-xl-10 px-xxl-15">
-              Find out everything you need to know about creating a business process model
+            Quickly create and distribute engaging content without the hassle of traditional advertising methods.
             </h3>
 
             <div className="row gx-lg-8 gx-xl-12 process-wrapper text-center mt-9">

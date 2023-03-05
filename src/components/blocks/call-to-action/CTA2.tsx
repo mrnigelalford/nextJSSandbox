@@ -17,8 +17,7 @@ const CTA2: FC = () => {
         </div>
 
         <div className="d-flex justify-content-center">
-          <NextLink href="#" title="Get Started" className="btn btn-primary rounded mx-1" />
-          <NextLink href="#" title="Free Trial" className="btn btn-green rounded mx-1" />
+          <NextLink href="/contact" title="Get Started" className="btn btn-primary rounded mx-1" />
         </div>
       </div>
     </section>

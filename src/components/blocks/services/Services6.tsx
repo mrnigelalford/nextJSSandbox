@@ -24,7 +24,7 @@ const Services6: FC<Services6Props> = (props) => {
 
       <div className={'col-lg-6 ' + colTwoClassNames}>
         <h3 className="display-4 mb-5">{title}</h3>
-        <p className="mb-5">{description}</p>
+        <p className="mb-5" style={{whiteSpace: 'pre-line'}}>{description}</p>
 
         <ListColumn list={serviceList5} bulletColor={bulletColor} />
       </div>

@@ -11,7 +11,11 @@ const COOKIE_NAME = 'landing-page'
 
 export function middleware(request: NextRequest) {
   
-  if (request.nextUrl.pathname === '/businness-owner') {
+  if (request.nextUrl.pathname === '/') {
+
+    return NextResponse.rewrite(new URL(`/landingpages/page1` as string, request.url))
+  }
+  if (request.nextUrl.pathname === ('/business-owner' || '/')) {
     let cookie = request.cookies.get(COOKIE_NAME);
     const _page = pages[Math.floor(Math.random() * pages.length)];
 

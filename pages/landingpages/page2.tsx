@@ -26,9 +26,9 @@ import pageData from 'data/adwatt';
 
 
 const Demo9: NextPage = () => {
-  useEffect(() => {
-    setCookie('landing-page', 'page2');
-  })
+  // useEffect(() => {
+  //   setCookie('landing-page', 'page2');
+  // })
 
   // self-serve programmatic advertising platform used by exceptional digital marketers like you
 
@@ -57,7 +57,7 @@ const Demo9: NextPage = () => {
       </header>
 
       {/* ========== main content ========== */}
-      <main className="content-wrapper">
+      <main className="content-wrapper mb-8">
         {/* ========== hero section ========== */}
         <Hero9 heroTitle={pageData.heroTitle} typewriterOptions={pageData.typewriterOptions} subtitle={pageData.subtitle} cta={'Get Started'} />
 

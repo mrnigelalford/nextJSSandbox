@@ -16,9 +16,9 @@ import { setCookie } from 'cookies-next';
 
 const Demo12: NextPage = () => {
 
-  useEffect(() => {
-    setCookie('landing-page', 'page3');
-  })
+  // useEffect(() => {
+  //   setCookie('landing-page', 'page3');
+  // })
 
   return (
     <Fragment>

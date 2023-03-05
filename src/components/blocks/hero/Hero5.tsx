@@ -23,7 +23,7 @@ const Hero5: FC<HeroProps> = (props) => {
 
             <div className="d-flex justify-content-center" style={slideInDownAnimate('600ms')}>
               <span style={slideInDownAnimate('900ms')}>
-                <NextLink href="#" title="Get Started" className="btn btn-primary rounded mx-1" />
+                <NextLink href="/contact" title="Get Started" className="btn btn-primary rounded mx-1" />
               </span>
             </div>
           </div>

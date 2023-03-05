@@ -91,7 +91,9 @@ const List = ({ color, title, description, features, cta, }: ListProps) => {
         ))}
       </ul>
 
+      <div className="d-flex justify-content-center">
       <NextLink title={cta} href="/contact" className={`btn btn-${color} mt-2`} />
+      </div> 
     </div>
   );
 };

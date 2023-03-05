@@ -20,15 +20,13 @@ const Tiles7: FC = () => {
         <div className="col-6">
           <img
             alt="demo"
-            src="/img/photos/sa5.jpg"
-            srcSet="/img/photos/sa5@2x.jpg 2x"
+            src="/img/locationExamples/barbershop.png"
             className="img-fluid rounded shadow-lg mb-5"
             style={fadeInAnimate('300ms')}
           />
           <img
             alt="demo"
-            src="/img/photos/sa6.jpg"
-            srcSet="/img/photos/sa6@2x.jpg 2x"
+            src="/img/locationExamples/coffeeShop.png"
             className="img-fluid rounded shadow-lg d-flex col-10 ms-auto"
             style={fadeInAnimate('600ms')}
           />
@@ -37,15 +35,13 @@ const Tiles7: FC = () => {
         <div className="col-6">
           <img
             alt="demo"
-            src="/img/photos/sa7.jpg"
-            srcSet="/img/photos/sa7@2x.jpg 2x"
+            src="/img/locationExamples/gymLobby.png"
             className="img-fluid rounded shadow-lg my-5"
             style={fadeInAnimate('900ms')}
           />
           <img
             alt="demo"
-            src="/img/photos/sa8.jpg"
-            srcSet="/img/photos/sa8@2x.jpg 2x"
+            src="/img/locationExamples/gymLobby2.png"
             className="img-fluid rounded shadow-lg d-flex col-10"
             style={fadeInAnimate('1200ms')}
           />

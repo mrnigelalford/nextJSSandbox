@@ -17,9 +17,9 @@ import { setCookie } from 'cookies-next';
 import pageData from 'data/adwatt';
 
 const Demo5: NextPage = () => {
-  useEffect(() => {
-    setCookie('landing-page', 'page1');
-  })
+  // useEffect(() => {
+  //   setCookie('landing-page', 'page1');
+  // })
   return (
     <Fragment>
       <PageProgress />
@@ -42,8 +42,16 @@ const Demo5: NextPage = () => {
               bulletColor="red"
               colOne={<Tiles7 />}
               rowClassNames="mb-14 mb-md-18"
-              title="We have considered our solutions to support every stage of growth."
-              description="Our indoor billboard platform offers effortless accessibility to a massive audience. Our cutting-edge technology and strategically placed billboards increase visibility and impact for your company or brand."
+              title={pageData.features.listTitle}
+              description={`Promote your business in one, two or several of our Host Partner locations. Be exclusive or semi-exclusive in any Host Partner location.
+
+              Become a Host Partner
+
+              Get your own screen that promotes your own content at the same time playing your business in other non-competitive Host Partner locations.
+
+              Closed Network Partner
+
+              Get your own dedicated screen that showcases only your content while at the same time promoting your business in other Host Partner locations. `}
             />
           </div>
         </section>
