@@ -60,7 +60,7 @@ const Demo5: NextPage = () => {
         <Process4 />
 
         {/* ========== call to action section ========== */}
-        <CTA2 />
+        <CTA2 description={pageData.CTA.description} />
       </main>
 
       {/* ========== footer section ========== */}

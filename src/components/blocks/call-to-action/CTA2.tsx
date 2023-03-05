@@ -1,7 +1,11 @@
 import { FC } from 'react';
 import NextLink from 'components/reuseable/links/NextLink';
 
-const CTA2: FC = () => {
+interface CTAProps {
+  description: string;
+}
+
+const CTA2: FC<CTAProps> = (props) => {
   return (
     <section
       style={{ backgroundImage: 'url(/img/map.png)' }}
@@ -11,7 +15,7 @@ const CTA2: FC = () => {
         <div className="row">
           <div className="col-lg-10 col-xl-9 col-xxl-8 mx-auto">
             <h3 className="display-4 mb-8 px-lg-12">
-              We are trusted by over 5000+ clients. Join them now and grow your business.
+              {props.description}
             </h3>
           </div>
         </div>

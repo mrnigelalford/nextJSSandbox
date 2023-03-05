@@ -62,6 +62,9 @@ const pageData = {
       }
     ]
   },
+  CTA: {
+    description: 'Join adwatt now and grow your business.'
+  }
   // faqlist is being imported, see above
   // <NextLink title="free 30-day trial" href="#" className="hover" />
 }
